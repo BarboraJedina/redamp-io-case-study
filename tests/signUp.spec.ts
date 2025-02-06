@@ -14,6 +14,7 @@ test.describe('Sign up page', () => {
 
         await signUp.goto();
 
+
         await expect(signUp.companyItem).toBeVisible();
         await expect(signUp.familyItem).toBeVisible();
         await expect(signUp.individualItem).toBeVisible();
@@ -86,7 +87,7 @@ test.describe('Partners network page', () => {
 })
 
 test.describe('Company name page', () => {
-    test('#8: Redirect to Company name page When Austria is Selected', async ({ page }) => {
+    test('#8: Redirect to Company name page When Austria is Selected test test', async ({ page }) => {
         const signUpCompanyName = new SignUpCompanyNamePage(page);
 
         await signUpCompanyName.goto();
@@ -231,6 +232,7 @@ test.describe('Complete registration page', () => {
         await signUpCompleteRegistration.goto();
 
         const request = await signUpCompleteRegistration.registrationPromise;
+
         const postData = request.postData();
 
         const bodyData = JSON.parse(postData ?? '{}');
